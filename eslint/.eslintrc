@@ -7,10 +7,11 @@
         "amd"     : true,
         "mocha"   : true
     },
+    "globals" : {
+        "angular" : true
+    },
     "rules": {
         "semi"                   : 2,
-        "no-console"             : 0,
-        "no-unused-vars"         : [1, {"vars" : "all", "args" : "after-used"} ],
         "arrow-parens"           : 2,
         "arrow-spacing"          : 2,
         "constructor-super"      : 2,
@@ -20,13 +21,15 @@
         "no-dupe-class-members"  : 2,
         "no-empty-pattern"       : 2,
         "no-this-before-super"   : 2,
-        "no-var"                 : 1,
         "object-shorthand"       : 2,
-        "prefer-arrow-callback"  : 2,
         "prefer-const"           : 2,
         "prefer-reflect"         : 2,
         "prefer-spread"          : 2,
         "prefer-template"        : 2,
-        "require-yield"          : 2
+        "require-yield"          : 2,
+        "no-unused-vars"         : [0, {"vars" : "all", "args" : "after-used"} ],
+        "prefer-arrow-callback"  : 0,
+        "no-console"             : 0,
+        "no-var"                 : 0
     }
 }
