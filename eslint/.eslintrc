@@ -25,11 +25,11 @@
         "prefer-const"           : 2,
         "prefer-reflect"         : 2,
         "prefer-spread"          : 2,
-        "prefer-template"        : 2,
         "require-yield"          : 2,
         "no-unused-vars"         : [0, {"vars" : "all", "args" : "after-used"} ],
         "prefer-arrow-callback"  : 0,
         "no-console"             : 0,
+        "prefer-template"        : 0,
         "no-var"                 : 0
     }
 }
