@@ -1,0 +1,22 @@
+{
+  "name": "f-configs",
+  "version": "1.0.0",
+  "description": "藤本専用configsファイル",
+  "main": "index.js",
+  "scripts": {
+    "test": "f-configs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftf1206/f-configs.git"
+  },
+  "keywords": [
+    "f-configs"
+  ],
+  "author": "t.fujimoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ftf1206/f-configs/issues"
+  },
+  "homepage": "https://github.com/ftf1206/f-configs#readme"
+}
