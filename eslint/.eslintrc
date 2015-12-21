@@ -9,7 +9,9 @@
     },
     "globals" : {
         "angular" : true,
-        "_"       : true
+        "_"       : true,
+        "google"  : true,
+        "AjaxZip3": true
     },
     "rules": {
         "semi"                   : 2,
