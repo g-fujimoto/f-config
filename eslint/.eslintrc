@@ -15,10 +15,15 @@
         "ons"     : true,
         "NCMB"    : true,
         "key"     : true,
-        "app"     : true
+        "app"     : true,
+        "ons"     : true
+    },
+    "ecmaFeatures": {
+        "modules": true
     },
     "rules": {
         "semi"                   : 2,
+        "arrow-parens"           : 2,
         "arrow-parens"           : 2,
         "arrow-spacing"          : 2,
         "constructor-super"      : 2,
@@ -26,11 +31,8 @@
         "no-class-assign"        : 2,
         "no-const-assign"        : 2,
         "no-dupe-class-members"  : 2,
-        "no-empty-pattern"       : 2,
         "no-this-before-super"   : 2,
         "object-shorthand"       : 2,
-        "prefer-const"           : 2,
-        "prefer-reflect"         : 2,
         "prefer-spread"          : 2,
         "prefer-template"        : 1,
         "require-yield"          : 2,
