@@ -8,15 +8,19 @@
         "mocha"   : true
     },
     "globals" : {
-        "angular" : true,
-        "_"       : true,
-        "google"  : true,
-        "AjaxZip3": true,
-        "ons"     : true,
-        "NCMB"    : true,
-        "key"     : true,
-        "app"     : true,
-        "ons"     : true
+        "angular"         : true,
+        "_"               : true,
+        "google"          : true,
+        "AjaxZip3"        : true,
+        "ons"             : true,
+        "NCMB"            : true,
+        "ncmb"            : true,
+        "key"             : true,
+        "app"             : true,
+        "ons"             : true,
+        "NoticeNavigator" : true,
+        "AuthNavigator"   : true,
+        "UserNavigator"   : true
     },
     "ecmaFeatures": {
         "modules": true
@@ -39,6 +43,7 @@
         "no-unused-vars"         : [0, {"vars" : "all", "args" : "after-used"} ],
         "prefer-arrow-callback"  : 1,
         "no-console"             : 0,
-        "no-var"                 : 0
+        "no-var"                 : 0,
+        "no-undef"               : 2
     }
 }
