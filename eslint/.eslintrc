@@ -20,7 +20,8 @@
         "ons"             : true,
         "NoticeNavigator" : true,
         "AuthNavigator"   : true,
-        "UserNavigator"   : true
+        "UserNavigator"   : true,
+        "AppSlidingMenu"  : true
     },
     "ecmaFeatures": {
         "modules": true
