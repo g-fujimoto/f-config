@@ -45,6 +45,6 @@
         "prefer-arrow-callback"  : 1,
         "no-console"             : 0,
         "no-var"                 : 0,
-        "no-undef"               : 2
+        "no-undef"               : 0
     }
 }
