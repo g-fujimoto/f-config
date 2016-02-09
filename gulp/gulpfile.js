@@ -1,14 +1,28 @@
+
 /* ======================================================================================= Modules */
+    // gulp本体
     var gulp     = require('gulp');
-    var util     = require('gulp-util');
+    // WindowsOS対応
+    var windows  = require('gulp-util');
+    // ファイル変更監視
     var watch    = require('gulp-watch');
+    // Babelコンパイル
     var babel    = require('gulp-babel');
+    // gulp.error発生時処理を止めない
     var plumber  = require('gulp-plumber');
+    // gulp.error発生時デスクトップ通知を行う
+    var notify   = require('gulp-notify');
+    // JS圧縮
     var uglify   = require('gulp-uglify');
+    // JS結合
     var concat   = require('gulp-concat');
+    // 変更ファイルのみ発火
     var changed  = require('gulp-changed');
+    // Sassコンパイル
     var sass     = require('gulp-sass');
+    // CSS圧縮
     var minify   = require('gulp-minify-css');
+    // 画像圧縮
     var imageMin = require('gulp-imagemin');
 
 /* ======================================================================================= Tasks */
@@ -16,23 +30,25 @@
 gulp.task('babel', function() {
     gulp.src('./src/**/*.es6')
         .pipe(changed('./www'))
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(babel({
             presets: ['es2015']
         }))
+        .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./www'));
+        .pipe(gulp.dest('./www/js'));
 });
 
 gulp.task('js', function() {
     gulp.src('./src/**/*.js')
         .pipe(changed('./www'))
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(babel({
             presets: ['es2015']
         }))
+        .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./www'));
+        .pipe(gulp.dest('./www/js'));
 });
 
 gulp.task('html', function() {
@@ -43,32 +59,39 @@ gulp.task('html', function() {
 gulp.task('sass', function() {
     gulp.src('./src/**/*.scss')
         .pipe(changed('./www'))
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(sass())
+        .pipe(concat('main.css'))
         .pipe(minify())
-        .pipe(gulp.dest('./www'));
+        .pipe(gulp.dest('./www/css'));
 });
 
 gulp.task('css', function() {
     gulp.src('./src/**/*.css')
         .pipe(changed('./www'))
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
+        .pipe(concat('main.css'))
         .pipe(minify())
-        .pipe(gulp.dest('./www'));
+        .pipe(gulp.dest('./www/css'));
 });
 
 gulp.task('jpg', function() {
     gulp.src('./src/**/*.jpg')
-        .pipe(plumber())
-        .pipe(changed())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(imageMin())
         .pipe(gulp.dest('./www'));
 });
 
 gulp.task('jpeg', function() {
     gulp.src('./src/**/*.jpeg')
-        .pipe(plumber())
-        .pipe(changed())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
+        .pipe(imageMin())
+        .pipe(gulp.dest('./www'));
+});
+
+gulp.task('png', function() {
+    gulp.src('./src/**/*.png')
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(imageMin())
         .pipe(gulp.dest('./www'));
 });
@@ -105,6 +128,11 @@ gulp.task('watch', function() {
     //jpeg
     watch('./src/**/*.jpeg', function(event) {
         gulp.start(['jpeg']);
+    });
+
+    //png
+    watch('./src/**/*.png', function(event) {
+        gulp.start(['png']);
     });
 
 });
