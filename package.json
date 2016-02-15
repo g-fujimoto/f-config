@@ -1,35 +1,27 @@
 {
-    "name": "f-configs",
-    "version": "1.0.0",
-    "description": "藤本専用configsファイル",
-    "main": "index.js",
-    "scripts": {
-        "test": "f-configs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ftf1206/f-configs.git"
-    },
-    "keywords": [
-        "f-configs"
-    ],
-    "author": "t.fujimoto",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/ftf1206/f-configs/issues"
-    },
-    "homepage": "https://github.com/ftf1206/f-configs#readme",
-    "dependencies": {
+  "name": "【============ CHANGE AppName ============】",
+  "version": "1.0.0",
+  "description": "【============ CHANGE DISCRIPTION ============】",
+  "main": "app.js",
+  "scripts": {
+  },
+  "keywords": [
+    "【============ CHANGE KeyWords ============】"
+  ],
+  "author": "t.fujimoto",
+  "license": "ISC",
+  "dependencies": {
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.1",
     "crypto": "0.0.3",
     "express": "^4.13.3",
     "express-session": "^1.13.0",
     "lodash": "^4.0.0",
+    "serve-favicon": "~2.3.0",
     "morgan": "^1.6.1",
     "path": "^0.12.7"
-    },
-    "devDependencies": {
+  },
+  "devDependencies": {
     "babel": "^6.3.26",
     "babel-preset-es2015": "^6.3.13",
     "gulp": "^3.9.0",
@@ -47,6 +39,7 @@
     "gulp-uglify": "^1.5.1",
     "gulp-usemin": "^0.3.16",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.5"
-    }
+    "gulp-watch": "^4.3.5",
+    "karma": "^0.13.21"
+  }
 }
